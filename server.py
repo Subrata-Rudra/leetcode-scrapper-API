@@ -107,7 +107,7 @@ def request_data():
     language_used_json = json.dumps(language_used_list)
 
     data_set = {'LeetCodeUsername': username, 'CandidateName': candidate_name, 'CandidateRank': candidate_rank, 'ContestAttended': contest_attended, 'ContestRating': contest_rating, 'ContestGlobalRanking': contest_global_ranking, 'TotalProblemsSolved': total_problem_solved,
-                'EasyProblem': problems_solved[0].text, 'MediumProblem': problems_solved[1].text, 'HardProblem': problems_solved[2].text, 'TotalSubmissions': total_submissions, 'TotalActiveDays': total_active_days, 'MaxStreak': max_streak, 'MostRecentlyEarnedBadge': most_recent_badge, 'Last15SolvedProblems': solved_problem_json, 'TopicsCovered': topics_covered_json, 'BadgesEarned': badges_earned_json, 'LanguageUsed': language_used_json, 'Last Solved': last_solved}
+                'EasyProblem': problems_solved[0].text, 'MediumProblem': problems_solved[1].text, 'HardProblem': problems_solved[2].text, 'TotalSubmissions': total_submissions, 'TotalActiveDays': total_active_days, 'MaxStreak': max_streak, 'MostRecentlyEarnedBadge': most_recent_badge, 'Last15SolvedProblems': solved_problem_json, 'TopicsCovered': topics_covered_json, 'BadgesEarned': badges_earned_json, 'LanguageUsed': language_used_json, 'LastSolved': last_solved}
 
     json_dump = json.dumps(data_set)
     return json_dump
