@@ -15,7 +15,7 @@ def home_page():
     return json_dump
 
 
-@app.route('/username', methods=['GET'])
+@app.route('/<username>', methods=['GET'])
 def request_data():
     # username = str(request.args.get('user'))
 
