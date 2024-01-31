@@ -61,22 +61,22 @@ def request_data():
         class_="mr-[5px] text-base font-medium leading-[20px] text-label-1 dark:text-dark-label-1",
     )
 
-    total_submissions = soup.find(
-        "span", class_="mr-[5px] text-base font-medium lc-md:text-xl"
-    ).text
+    # total_submissions = soup.find(
+    #     "span", class_="mr-[5px] text-base font-medium lc-md:text-xl"
+    # ).text
 
     language_used = soup.find_all(
         "span",
         class_="inline-flex items-center px-2 whitespace-nowrap text-xs leading-6 rounded-full text-label-3 dark:text-dark-label-3 bg-fill-3 dark:bg-dark-fill-3 notranslate",
     )
 
-    total_active_days = soup.find_all(
-        "span", class_="font-medium text-label-2 dark:text-dark-label-2"
-    )[3].text
+    # total_active_days = soup.find_all(
+    #     "span", class_="font-medium text-label-2 dark:text-dark-label-2"
+    # )[3].text
 
-    max_streak = soup.find_all(
-        "span", class_="font-medium text-label-2 dark:text-dark-label-2"
-    )[4].text
+    # max_streak = soup.find_all(
+    #     "span", class_="font-medium text-label-2 dark:text-dark-label-2"
+    # )[4].text
 
     solved_problem = soup.find_all(
         "span", class_="text-label-1 dark:text-dark-label-1 font-medium line-clamp-1"
@@ -95,10 +95,10 @@ def request_data():
         "div", class_="text-label-1 dark:text-dark-label-1 text-base"
     ).text
 
-    last_solved = soup.find(
-        "span",
-        class_="text-label-3 dark:text-dark-label-3 hidden whitespace-nowrap lc-md:inline",
-    ).text
+    # last_solved = soup.find(
+    #     "span",
+    #     class_="text-label-3 dark:text-dark-label-3 hidden whitespace-nowrap lc-md:inline",
+    # ).text
 
     language_used_list = []
     ind = 0
@@ -140,15 +140,15 @@ def request_data():
         "EasyProblem": problems_solved[0].text,
         "MediumProblem": problems_solved[1].text,
         "HardProblem": problems_solved[2].text,
-        "TotalSubmissions": total_submissions,
-        "TotalActiveDays": total_active_days,
-        "MaxStreak": max_streak,
+        # "TotalSubmissions": total_submissions,
+        # "TotalActiveDays": total_active_days,
+        # "MaxStreak": max_streak,
         "MostRecentlyEarnedBadge": most_recent_badge,
         "Last15SolvedProblems": solved_problem_json,
         "TopicsCovered": topics_covered_json,
         "BadgesEarned": badges_earned_json,
         "LanguageUsed": language_used_json,
-        "LastSolved": last_solved,
+        # "LastSolved": last_solved,
     }
 
     json_dump = json.dumps(data_set)
