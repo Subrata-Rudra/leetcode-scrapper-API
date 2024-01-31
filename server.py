@@ -10,9 +10,7 @@ CORS(app)
 
 @app.route("/", methods=["GET"])  # creating an endpoint for GET request
 def home_page():
-    data_set = {"Page": "Home", "Message": "Successfully loaded the HomePage"}
-    json_dump = json.dumps(data_set)
-    return json_dump
+    return "<html><body style='margin: 1rem; padding: 1rem; font-family: monospace; font-size: 1.2rem; height: 100vh; background-color: #cdf4df; display: flex; flex-direction: column; justify-content: center; text-align: center; align-items: center'><h1 style='color: green'>Hello, Welcome to LEETCODE SCRAPPER's HOMEPAGE</h1> <h2>To get someone's LeetCode Account Details send GET request to the below URL  <p style='color: blue'>https://subrata-rudra-leetcode-scrapper.onrender.com/user/?user=LEETCODE_USERNAME_OF_USER</p></h2></body></html>"
 
 
 @app.route("/user/", methods=["GET"])
